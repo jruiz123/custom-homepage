@@ -1,0 +1,31 @@
+#search {
+    border-radius: 0px;
+}
+
+.btn-search:hover {
+    cursor: pointer;
+    /*background: linear-gradient(to bottom right, #ff99ff 0%, #3399ff 100%);*/
+    /*background: linear-gradient(to bottom right, #ff00ff 0%, #0000cc 100%);*/
+}
+
+.card {
+    color: white;
+    border: none;
+    border-radius: 0px;
+}
+
+.card-1 {
+  background: linear-gradient(to right, #cc66ff 0%, #6699ff 100%);
+}
+
+.card-2 {
+  background: linear-gradient(to right, #ff9966 0%, #ff6666 100%);
+}
+
+.card-3 {
+  background: linear-gradient(to right, #6699ff 0%, #66ffcc 100%);
+}
+
+.card-4 {
+    background: linear-gradient(to right, #ff9999 0%, #ffcc66 100%);
+}

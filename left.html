@@ -1,0 +1,31 @@
+<html>
+<header>
+	<title>
+		Left Frame
+	</title>
+</header>
+<body>
+<xmp>
+<p>Hello</p>
+ERRORS!!!!!
+#798 view.details.php (For Errors in creating repayment Schedules) 
+	else if ($this->bean->identity_verification_document_date_of_receipt == NULL) {
+		$no_approved_loan_amount = '<input title="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'" class="button" onclick="alert(\\\''.$mod_strings['LBL_NO_PRINCIPAL_CONFIRMATION_DOCUMENT_RECEIPT_DATE'].'\\\')" type="button" name="button" value="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'">&nbsp;';
+		print "<script type='text/javascript'>document.getElementById('create_payment_schedule').innerHTML = '".$no_approved_loan_amount."';</script>";
+	} else if ($this->bean->annual_income_date_of_receipt == NULL) {
+		$no_approved_loan_amount = '<input title="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'" class="button" onclick="alert(\\\''.$mod_strings['LBL_NO_RECEIPT_OF_INCOME_CERTIFICATE_DATE'].'\\\')" type="button" name="button" value="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'">&nbsp;';
+		print "<script type='text/javascript'>document.getElementById('create_payment_schedule').innerHTML = '".$no_approved_loan_amount."';</script>";
+	} else if ($this->bean->antisocial_checked_date_confirmed == NULL) {
+		$no_approved_loan_amount = '<input title="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'" class="button" onclick="alert(\\\''.$mod_strings['LBL_NO_ANTISOCIAL_CHECKED_DATE_CONFIRMED_DATE'].'\\\')" type="button" name="button" value="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'">&nbsp;';
+		print "<script type='text/javascript'>document.getElementById('create_payment_schedule').innerHTML = '".$no_approved_loan_amount."';</script>";
+	} else if ($this->bean->statement_sent_date == NULL) {
+		$no_approved_loan_amount = '<input title="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'" class="button" onclick="alert(\\\''.$mod_strings['LBL_NO_SEND_USAGE_STATEMENT_DATE'].'\\\')" type="button" name="button" value="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'">&nbsp;';
+		print "<script type='text/javascript'>document.getElementById('create_payment_schedule').innerHTML = '".$no_approved_loan_amount."';</script>";
+	} else if ($this->bean->enrollment_confirmed_date == NULL) {
+		$no_approved_loan_amount = '<input title="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'" class="button" onclick="alert(\\\''.$mod_strings['LBL_ENROLLMENT_CONFIRMED'].'\\\')" type="button" name="button" value="'.$mod_strings['LBL_CREATE_PAYMENT_SCHEDULE'].'">&nbsp;';
+		print "<script type='text/javascript'>document.getElementById('create_payment_schedule').innerHTML = '".$no_approved_loan_amount."';</script>";
+	}
+
+</xmp>
+</body>
+</html>
