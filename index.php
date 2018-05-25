@@ -38,7 +38,7 @@
 			<!-- Row 1 -->
 			<div class="row my-2 align-items-center">
 				<div class="col-md-3 col-sm-6">
-					<a href="" class="card bg-1">
+					<a id="todo" href="" class="card bg-1">
 						<div class="card-body mx-auto">
 							<i class="fas fa-clipboard-list fa-5x"></i>
 						</div>
@@ -47,7 +47,7 @@
 				</div>
 				<div class="my-2 col-sm-12 d-block d-sm-none"></div>
 				<div class="col-md-3 col-sm-6">
-					<a href="" class="card bg-2">
+					<a id="notes" href="" class="card bg-2">
 						<div class="card-body mx-auto">
 							<i class="fas fa-sticky-note fa-5x"></i>
 						</div>
@@ -56,7 +56,7 @@
 				</div>
 				<div class="my-2 col-sm-12 d-block d-sm-none d-none d-sm-block d-md-none"></div>
 				<div class="col-md-3 col-sm-6">
-					<a href="" class="card bg-3">
+					<a id="favorite" href="" class="card bg-3">
 						<div class="card-body mx-auto">
 							<i class="fas fa-star fa-5x"></i>
 						</div>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="my-2 col-sm-12 d-block d-sm-none"></div>
 				<div class="col-md-3 col-sm-6">
-					<a href="" class="card bg-4">
+					<a id="settings" href="" class="card bg-4">
 						<div class="card-body mx-auto">
 							<i class="fas fa-cog fa-5x"></i>
 						</div>
@@ -117,5 +117,15 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+		<!-- Custom Script -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('a.card').click(function(){
+				window.alert($(this).attr('id'));
+				$('#sidebar').removeClass('sbar-h');
+				$('#sidebar').addClass('sbar-o');
+			});
+		});
+		</script>
 	</body>
 </html>
