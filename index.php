@@ -21,12 +21,12 @@
 					<p id="sidebar-title" class="h2 text-white"></p>
 				</div>
 				<div class="col-4 text-right">
-					<button class="btn text-white sq-border">
+					<button id="close" class="btn text-white sq-border">
 						<i class="fa fa-times fa-1x"></i>
 					</button>
 				</div>
 			</div>
-			<div>
+			<div class="bg-light">
 				Sample
 			</div>
 		</div>
@@ -133,9 +133,10 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('.card').click(function(){
-					$('#sidebar').toggleClass('sbar-h');
+					$('#sidebar').addClass('sbar-o');
 					var id = $(this).attr('id');
 					document.getElementById('sidebar-title').innerHTML = document.getElementById(id+'-caption').innerHTML;
+					removeHeaderClass();
 					if (id == 'todo') {
 						$('#sidebar-header').addClass('bg-1');
 					} else if (id == 'notes') {
@@ -147,7 +148,15 @@
 					}
 
 				});
+
+				$('#close').click(function(){
+					$('#sidebar').removeClass('sbar-o');
+				});
 			});
+
+			function removeHeaderClass() {
+				$('#sidebar-header').removeClass('bg-1').removeClass('bg-2').removeClass('bg-3').removeClass('bg-4').removeClass('bg-5').removeClass('bg-6').removeClass('bg-7').removeClass('bg-8');
+			}
 		</script>
 	</body>
 </html>
