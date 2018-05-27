@@ -137,14 +137,24 @@
 					var id = $(this).attr('id');
 					document.getElementById('sidebar-title').innerHTML = document.getElementById(id+'-caption').innerHTML;
 					removeHeaderClass();
-					if (id == 'todo') {
-						$('#sidebar-header').addClass('bg-1');
-					} else if (id == 'notes') {
-						$('#sidebar-header').addClass('bg-2');
-					} else if (id == 'favorite') {
-						$('#sidebar-header').addClass('bg-3');
-					} else if (id == 'settings') {
-						$('#sidebar-header').addClass('bg-4');
+					switch(id){
+						case('todo'): $('#sidebar-header').addClass('bg-1');
+							break;
+						case('notes'): $('#sidebar-header').addClass('bg-2');
+							break;
+						case('favorite'): $('#sidebar-header').addClass('bg-3');
+							break;
+						case('settings'): $('#sidebar-header').addClass('bg-4');
+							break;
+						case('gmail'): $('#sidebar-header').addClass('bg-5');
+							break;
+						case('sbi'): $('#sidebar-header').addClass('bg-6');
+							break;
+						case('learn'): $('#sidebar-header').addClass('bg-7');
+							break;
+						case('social'): $('#sidebar-header').addClass('bg-8');
+							break;
+						default: break;
 					}
 
 				});
