@@ -1,3 +1,4 @@
+/* Search */
 #search {
     border-radius: 0px;
 }
@@ -6,24 +7,16 @@
     cursor: pointer;
 }
 
+/* Cards */
 .card {
     color: white;
     border: none;
     border-radius: 0px;
 }
 
-.sq-border {
-    border-radius: 0px;
-    background: #0E4F90;
-    color: #fff;
-}
 
-.sq-border:hover {
-    background: #337BFF;
-    color: #808080;
-}
-
-a.card:hover {
+div.card:hover {
+    cursor: pointer;
     opacity: 0.8;
     color: #fff;
     box-shadow:0px 0px 0px 3px inset;
@@ -62,8 +55,25 @@ a.card:hover {
     background: linear-gradient(to right, #9999ff 0%, #3366ff 100%);
 }
 
+.bg-black {
+    background: #0E0E0E;
+}
+
+/* Sidebar */
+.metro-border {
+    border-radius: 100%;
+    border: solid 3px #ffffff;
+    background: none;
+    color: #ffffff;
+}
+
+.metro-border:hover {
+    border-color: #337BFF;
+    background: #337BFF;
+    color: #808080;
+}
+
 #sidebar {
-    /*display: block;*/
     position: absolute;
     top: 0;
     bottom: 0;
@@ -83,4 +93,39 @@ a.card:hover {
 
 .sbar-o {
     display: block;
+}
+
+/* Sidebar tabs */
+.tab-row {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 40px;
+    color: #808080;
+}
+
+.tab-row div {
+    margin-bottom: 10px;
+    width: 50%;
+    float: left;
+    display: inline-block;
+    color: #ffffff;
+    background: #337BFF;
+    cursor: pointer;
+}
+
+.tab-row .active {
+    border-bottom: solid 3px #ffffff;
+    background: #2E71EB;
+}
+
+.tab-row div:hover {
+    background: #2E71EB;
+}
+
+.metro-input {
+    background: none;
+    border: solid 2px #ffffff;
 }

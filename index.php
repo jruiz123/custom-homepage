@@ -11,26 +11,29 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Icons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<!-- Angular JS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link rel="shortcut icon" href="img/homepage_logo.svg">
+
 	</head>
 	<body>
-		<div id="sidebar" class="sbar-h">
+		<div id="sidebar" class="bg-dark sbar-h">
 			<div id="sidebar-header" class="row px-2 py-2 bg-1">
 				<div class="col-8">
 					<p id="sidebar-title" class="h2 text-white"></p>
 				</div>
 				<div class="col-4 text-right">
-					<button id="close" class="btn text-white sq-border">
+					<button id="close" class="btn text-white metro-border">
 						<i class="fa fa-times fa-1x"></i>
 					</button>
 				</div>
 			</div>
-			<div class="bg-light">
-				Sample
-			</div>
+			<?php include'todo.php'; ?>
 		</div>
-		<div class="container">
+		<div class="container" ng-app="">
 			<div class="row my-2">
 				<div class="col-lg-4 offset-lg-4 col-md-12">
 					<form>
@@ -38,9 +41,9 @@
 							<div class="input-group">
 								<input type="type" class="form-control" id="search" placeholder="Google">
 								<div class="input-group-prepend">
-									<div class="input-group-text btn-search">
+									<a href="index-1.0.php" class="input-group-text btn-search">
 										<i class="fas fa-search"></i>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -130,43 +133,6 @@
 		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 		<!-- Custom Script -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('.card').click(function(){
-					$('#sidebar').addClass('sbar-o');
-					var id = $(this).attr('id');
-					document.getElementById('sidebar-title').innerHTML = document.getElementById(id+'-caption').innerHTML;
-					removeHeaderClass();
-					switch(id){
-						case('todo'): $('#sidebar-header').addClass('bg-1');
-							break;
-						case('notes'): $('#sidebar-header').addClass('bg-2');
-							break;
-						case('favorite'): $('#sidebar-header').addClass('bg-3');
-							break;
-						case('settings'): $('#sidebar-header').addClass('bg-4');
-							break;
-						case('gmail'): $('#sidebar-header').addClass('bg-5');
-							break;
-						case('sbi'): $('#sidebar-header').addClass('bg-6');
-							break;
-						case('learn'): $('#sidebar-header').addClass('bg-7');
-							break;
-						case('social'): $('#sidebar-header').addClass('bg-8');
-							break;
-						default: break;
-					}
-
-				});
-
-				$('#close').click(function(){
-					$('#sidebar').removeClass('sbar-o');
-				});
-			});
-
-			function removeHeaderClass() {
-				$('#sidebar-header').removeClass('bg-1').removeClass('bg-2').removeClass('bg-3').removeClass('bg-4').removeClass('bg-5').removeClass('bg-6').removeClass('bg-7').removeClass('bg-8');
-			}
-		</script>
+		<script type="text/javascript" src="js/custom.js"></script>
 	</body>
 </html>
