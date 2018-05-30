@@ -20,7 +20,7 @@
 
 	</head>
 	<body>
-		<div id="sidebar" class="bg-dark sbar-h">
+		<div id="sidebar" class="bg-dark sbar-o">
 			<div id="sidebar-header" class="row px-2 py-2 bg-1">
 				<div class="col-8">
 					<p id="sidebar-title" class="h2 text-white"></p>

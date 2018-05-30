@@ -111,21 +111,23 @@ div.card:hover {
     width: 50%;
     float: left;
     display: inline-block;
-    color: #ffffff;
     background: #337BFF;
+    color: #A3A3A3;
     cursor: pointer;
 }
 
 .tab-row .active {
-    border-bottom: solid 3px #ffffff;
-    background: #2E71EB;
+    color: #ffffff;
+    background: #2D6DE2; /* Dark Blue */
 }
 
 .tab-row div:hover {
-    background: #2E71EB;
+    color: #ffffff;
+    /*background: #2E71EB;*/
+    background: #2D6DE2; /* Dark Blue */
 }
 
-.metro-input {
-    background: none;
+input.metro-input {
+    background: none !important;
     border: solid 2px #ffffff;
 }
