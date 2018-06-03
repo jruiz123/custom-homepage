@@ -103,7 +103,7 @@ div.card:hover {
     padding: 0;
     width: 100%;
     line-height: 40px;
-    color: #808080;
+    color: #E3E0E0;
 }
 
 .tab-row div {
@@ -130,4 +130,25 @@ div.card:hover {
 input.metro-input {
     background: none !important;
     border: solid 2px #ffffff;
+    color: #ffffff !important;
+}
+
+hr.border-line {
+    border-color: #B2B2B2;
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-list > li {
+    color: #ffffff
+}
+
+input.metro-checkbox {
+    background: none !important;
+    border: solid 2px #ffffff;
+    color: #ffffff !important;
 }
